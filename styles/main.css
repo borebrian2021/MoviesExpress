@@ -1,0 +1,246 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #e49a04;
+  background-color: #2b2b31;
+}
+.m-text{
+  margin:40px 0 10px 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.n-text{
+  margin:5px 0 10px 40px;
+  color: white;
+
+}
+p{
+  margin: none !important;
+  padding: none ;
+}
+header {
+  float: left;
+  width: 225px;
+  height: auto;
+  border-right: solid #404040 1px;
+  border-bottom: solid #404040 1px;
+  border-radius: 0 0 6px 0;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 52px;
+  color: #3493d5;
+  margin: 10px 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+nav ul {
+  margin-left: 15px;
+}
+
+nav ul li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: #f1a458;
+  color: #fff;
+}
+
+main {
+  float: left;
+  margin-left: 50px;
+  width: 600px;
+}
+
+.beer-details h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.beer-details h3 {
+  font-size: 24px;
+}
+
+.beer-details img {
+  display: block;
+  height: 200px;
+  margin: 0 auto 25px auto;
+}
+
+form {
+  width: 450px;
+  margin: 0 auto 50px auto;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  height: 100px;
+  border: 1px solid gray;
+  padding: 5px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+form button[type="submit"] {
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #f1a458;
+  color: #fff;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+#review-list li {
+  background-color: #fff3a9;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+
+nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #2b2b31;
+  height: 50px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+}
+.pointMe{
+  cursor:pointer;
+}
+.nav_left {
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  
+}
+.nav_left small {
+
+margin-bottom: 70px;
+  
+}
+.logo_{
+  height: 70px;
+  width: 70px;
+}
+.nav_right {
+  text-align: right;
+  align-items: right;
+}
+
+
+.nav .nav_left p img {
+
+  float: left;
+  color: #7cbcfe;
+
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+
+  transition: all 0.1s ease-in;
+}
+.logo:hover {
+  height: 50px;
+  width: 50px;
+
+}
+.container {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 95%;
+  height: 300px;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
+  margin: 8px;
+}
+.container .container__info {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 20%;
+  display: flex;
+  align-items: flex-end;
+  padding: 15px 30px;
+  color: #fff;
+}
+.container .container__info span {
+  margin-right: 20px;
+}
+.container .container__info i {
+  margin-right: 10px;
+}
+.container .container__profile {
+  background-color: #e4f2fd;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.container .container__profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-position: center;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.container .container__profile h2 {
+  color: #334454;
+  font-size: 1.2rem;
+}
+.container .container__profile p {
+  color: #a1b2bc;
+  font-size: 0.8rem;
+}
+.container .container__profile p b {
+  font-style: italic;
+}
+.white_board {
+  width: 99%;
+  height: auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom:120px;
+}
+.c1{
+  background: url('../assets/Images/movie.jpg');
+
+}
+.width{
+  width: 50%;
+}
