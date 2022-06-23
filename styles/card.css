@@ -99,3 +99,51 @@ form button[type="submit"] {
   padding: 20px;
   margin-bottom: 20px;
 }
+
+
+nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: #162844;
+  height: 50px;
+  width: 100%;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+}
+.pointMe{
+  cursor:pointer;
+}
+.nav_left {
+  text-align: left;
+  align-items: left;
+}
+.logo_{
+  height: 70px;
+  width: 70px;
+}
+.nav_right {
+  text-align: right;
+  align-items: right;
+}
+
+
+.nav .nav_left p img {
+
+  float: left;
+  color: #7cbcfe;
+
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+
+  transition: all 0.1s ease-in;
+}
+.logo:hover {
+  height: 40px;
+  width: 40px;
+
+}
