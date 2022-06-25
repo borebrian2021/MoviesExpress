@@ -145,9 +145,19 @@ nav {
 margin-bottom: 70px;
   
 }
+.logo__{
+  margin-top: 15px;
+  margin-right: 40px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 .logo_{
   height: 70px;
   width: 70px;
+}
+.logo__{
+  height: 30px;
+  width: 30px;
 }
 .nav_right {
   text-align: right;
@@ -365,28 +375,73 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: all 0.2s ease-in;
   
 }
+.loveBig{
+  height: 90px;
+
+}
 .btns:hover{
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   height: 40px;
   
 }
+.star{
+  height: 20px;
+  transition: all 0.1s ease-in;
+}
+.star:hover{
+  height: 24px;
+}
+.white{
+  color: white !important;
+}
 .icons_{
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  width: 200px;
+  grid-template-columns: 25% 25% 25% 25%;
+  width: 250px;
   margin-top: 15px;
   
 }
-.icons_{
+.loveMe{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.loveLeft{
+  justify-content:right;
+  align-items: righ;
+  text-align: right;
+}
+/* .icons_{
   display:  grid;
   grid-template-columns: ;
-}
+} */
 .ratings{
   width: 200px;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
 
 
+}
+#title{
+  transition: all 0.1s ease-in;
+  font-size:25px ;
+
+}
+#genre{
+  transition: all 0.1s ease-in;
+  font-size:16px ;
+}
+#genre:hover{
+  font-size:20px ;
+}
+#date{
+  transition: all 0.1s ease-in;
+  font-size:16px ;
+}
+#date:hover{
+  font-size:20px ;
+}
+#title:hover{
+  font-size:30px ;
 }
 /* .actor{
   height: 40px;
