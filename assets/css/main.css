@@ -179,10 +179,20 @@ margin-bottom: 70px;
   background-position: center;
   background-size: cover;
   width: 95%;
+  border-radius: 5px;
   height: 500px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: relative;
   /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.315); */
   margin: 8px;
+  transition: all 0.1s ease-in;
+}
+.container:hover {
+
+  width: 100%;
+  border-radius: 20px;
+  height: 600px;
+  /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.315); */
 }
 .container .container__info {
   position: absolute;
@@ -269,6 +279,7 @@ margin-bottom: 70px;
 
 }
 .movie_details{
+  padding: 10px;
   grid-gap: 10px;
   width: 94.5%;
   display: grid;
@@ -307,7 +318,7 @@ margin-bottom: 70px;
 }
 .image{
   height:600px;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 100%;
   margin: 10px;
   background-repeat: no-repeat;
@@ -320,10 +331,55 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
   margin-right: 10px;
   padding: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
   justify-content: left;
   align-items: left;
   color: white !important;
+}
+.white{
+  color: white;
+}
+.avatar{
+  height:50px;
+  width: 50px;
+  border-radius: 100px;
+  /* border: 2px solid #e49a04; */
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all ease-in 0.2s;
+}
+.avatar:hover{
+  height: 200px;
+  width: 200px;
+  border: none;
+  border-radius: 400px;
+  object-fit: cover;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  transition: all ease-in 0.2s;
+}
+.btns{
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  border-radius: 10px;
+  padding: 5px;
+  height: 30px;
+  transition: all 0.2s ease-in;
+  
+}
+.btns:hover{
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  height: 40px;
+  
+}
+.icons_{
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  width: 200px;
+  margin-top: 15px;
+  
+}
+.icons_{
+  display:  grid;
+  grid-template-columns: ;
 }
 .ratings{
   width: 200px;
