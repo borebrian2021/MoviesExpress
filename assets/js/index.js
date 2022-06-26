@@ -10,41 +10,92 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchMoviesDetails()
 
 });
+
+//FETCH MOVIE LIST FROM AN API
 function fetchMoviesDetails() {
   fetch(BASE_URL)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      // appllyData(data)
-      console.log(data)
-      return renderNameOfTheBeer(data);
+       
+      // console.log(data)
+      return appllyData(data);
     });
 }
+
+
+//RENDER MOVIE CARDS
+function appllyData(response) {
+    console.log(response)
+    response.map(card=> {
+      var cardDiv = document.createElement('div');
+      cardDiv.innerHTML = ` <div class="card">
+      <img class="full" src="${card.poster}"/>
+      <div class="description">
+        <h5>${card.title}</h5>
+        <small>${card.description.split(' ').slice(0, 15).join(' ')}</small><br/>
+        <button class="btn btn-sm btn-warning customB" onclick=(alert("Working"))>More</button>
+    
+      </div>
+    </div>`
+      document.getElementById('cardsHolder_').appendChild(cardDiv);
+    })
+
+
+    // for (let i = 0; i < response.length; i++) {
+    //       console.log(response[i].title)
+    //       let beerName_ = response[i].name;
+    //       const unoderedList = document.getElementById("cardsHolder");
+    //       const createCard = document.createElement("li");
+    //       list.addEventListener('click', function (e) {
+    //         openMe(response[i])
+    //         // alert("working")
+      
+    //       });
+    //       list.innerHTML = beerName_
+    //       unoderedList.appendChild(list)
+    //     }
+
+    // let beerName_ = response[0].name;
+    // let beerImag_ = response[0].image_url
+    // let beerDescription_ = response[0].description
+    // let reviews_ = response[0].reviews
+    // const beerName = document.getElementById("beer-name");
+    // const beerDescription = document.getElementById("beer-description");
+    // const beerImage = document.getElementById("beer-image");
+    // beerName.innerText = beerName_;
+    // beerDescription.innerText = beerDescription_;
+    // beerImage.innerText = beerDescription_;
+    // beerImage.src = beerImag_;
+    // renderBeerReviews(reviews_)
+}
+
+
 function hideAllElements() {
   document.getElementById('watchList').style.display = 'none'
   document.getElementById('movieDetails').style.display = 'none'
 }
 
-function renderNameOfTheBeer(response) {
+// function renderNameOfTheBeer(response) {
 
-  console.log(response.length)
-  console.log(response);
-  for (let i = 0; i < response.length; i++) {
-    console.log(response[i].name)
-    let beerName_ = response[i].name;
-    const unoderedList = document.getElementById("beer-list");
-    const list = document.createElement("li");
-    list.addEventListener('click', function (e) {
-      openMe(response[i])
-      // alert("working")
+//   console.log(response.length)
+//   console.log(response);
+//   for (let i = 0; i < response.length; i++) {
+//     console.log(response[i].name)
+//     let beerName_ = response[i].name;
+//     const unoderedList = document.getElementById("beer-list");
+//     const list = document.createElement("li");
+//     list.addEventListener('click', function (e) {
+//       openMe(response[i])
+//       // alert("working")
 
-    });
-    list.innerHTML = beerName_
-    unoderedList.appendChild(list)
-  }
+//     });
+//     list.innerHTML = beerName_
+//     unoderedList.appendChild(list)
+//   }
 
-}
+// }
 // function renderBeerReviews(reviews_) {
 //     const unoderedList = document.getElementById("review-list");
 //     reviews_.forEach(element => {
@@ -59,24 +110,6 @@ function renderNameOfTheBeer(response) {
 //     let beerImag_ = response.image_url
 //     let beerDescription_ = response.description
 //     let reviews_ = response.reviews
-
-//     const beerName = document.getElementById("beer-name");
-//     const beerDescription = document.getElementById("beer-description");
-//     const beerImage = document.getElementById("beer-image");
-
-//     beerName.innerText = beerName_;
-//     beerDescription.innerText = beerDescription_;
-//     beerImage.innerText = beerDescription_;
-//     beerImage.src = beerImag_;
-//     renderBeerReviews(reviews_)
-
-// }
-// function appllyData(response) {
-//     console.log(response)
-//     let beerName_ = response[0].name;
-//     let beerImag_ = response[0].image_url
-//     let beerDescription_ = response[0].description
-//     let reviews_ = response[0].reviews
 
 //     const beerName = document.getElementById("beer-name");
 //     const beerDescription = document.getElementById("beer-description");
