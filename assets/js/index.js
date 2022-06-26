@@ -27,22 +27,25 @@ function openMe(data) {
 
 
   //SET DATA
-  
   poster.style.backgroundImage = `url('${data.poster}')`
   director.innerHTML=data.director
-  actor.style.backgroundImage = `url('${data.producerPoster}')`
+  actor.src = data.producerPoster
+
   title.innerHTML=data.title
   genre.innerHTML=data.genre
   description.innerHTML=data.description
   date.innerHTML=data.releaseDate
   lenght.innerHTML=data.lenght
-  // producers.innerHTML=data.producers
-  // alert(data.producers)
-  console.log(data)
-  // ratingParent.innerHTML=data.
-  
-  // wholeCard.style.backgroundImage = `url('${data.poster}')`
-  // renderBeerReviews(reviews_)
+  producers.innerHTML=data.producers
+
+  //LOOP ON RATES
+  renderRates()
+
+
+}
+
+//RATES LOOPING FUNCTION
+function renderRates(){
 
 }
 
