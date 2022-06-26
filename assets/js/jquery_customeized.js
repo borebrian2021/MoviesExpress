@@ -48,6 +48,12 @@ $("#back").click(function() {
 
 });
 $("#searchButton").click(function(){
-    searchRecords($('#search').val());
+    $('#loading__').fadeIn();
+
+    setTimeout(() => {
+        searchRecords($('#search').val());
+        $('#loading__').fadeOut();
+
+      }, "1500");
     // alert();
   });

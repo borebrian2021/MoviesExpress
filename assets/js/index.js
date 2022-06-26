@@ -7,18 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
   //     console.log('clicked');
   // });
 
-//PLAY IFRAME
+  //PLAY IFRAME
 
 
   hideAllElements()
   fetchMoviesDetails()
-  const playB= document.getElementById('youtube').addEventListener('click',function(){
+  const playB = document.getElementById('youtube').addEventListener('click', function () {
 
- })
+  })
 
 });
 //OPERN MOVIE DETAILS
-  function openMe(data) {
+function openMe(data) {
   const poster = document.getElementById("mPoster");
   const director = document.getElementById("director");
   const actor = document.getElementById("actor");
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const wholeCard = document.getElementById("movieDetails");
   const youtube = document.getElementById("youtube");
 
-  
+
   //SET DATA
   poster.style.backgroundImage = `url('${data.poster}')`
   director.innerHTML = data.director
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   date.innerHTML = data.releaseDate
   lenght.innerHTML = data.lenght
   producers.innerHTML = data.producers
-  document.getElementById('video').src=data.youtube
+  document.getElementById('video').src = data.youtube
   //LOOP ON RATES
   renderRates(data.rates)
 
@@ -140,17 +140,22 @@ function searchRecords(query) {
     .then(function (response) {
       return response.json();
     }).then(function (response_) {
+      let countResults = 0;
 
       // console.log(data)
-   
-  // console.log(response_)
-    response_.map((card, index, records) => {
-    console.log(card);
-    if(card.title.includes(query) || card.description.includes(query)){
-      let parent=document.getElementById(`cardsHolder_`)
-      removeAllChildNodes(parent);
-    var cardDiv = document.createElement('div');
-    cardDiv.innerHTML = ` <div class="card">
+
+      // console.log(response_)
+      response_.map((card, index, records) => {
+
+        console.log(card);
+        if (card.title.toLowerCase().includes(query.toLowerCase())) {
+          countResults++
+          if (index == 0) {
+            let parent = document.getElementById(`cardsHolder_`)
+            removeAllChildNodes(parent);
+          }
+          var cardDiv = document.createElement('div');
+          cardDiv.innerHTML = ` <div class="card">
       <img class="full" src="${card.poster}"/>
       <div class="description" id="description${index}">
         <h5>${card.title}</h5>
@@ -158,26 +163,38 @@ function searchRecords(query) {
     
       </div>
     </div>`
-    document.getElementById('cardsHolder_').appendChild(cardDiv);
-    var detailsButton = document.createElement('button');
-    detailsButton.classList.add("btn");
-    detailsButton.classList.add("btn-sm");
-    detailsButton.classList.add("btn-warning");
-    detailsButton.classList.add("customB");
-    detailsButton.innerText = "More"
-    detailsButton.addEventListener('click', function (e) {
-      openMe(card)
-      // alert("working")
+          document.getElementById('cardsHolder_').appendChild(cardDiv);
+          var detailsButton = document.createElement('button');
+          detailsButton.classList.add("btn");
+          detailsButton.classList.add("btn-sm");
+          detailsButton.classList.add("btn-warning");
+          detailsButton.classList.add("customB");
+          detailsButton.innerText = "More"
+          detailsButton.addEventListener('click', function (e) {
+            openMe(card)
+            // alert("working")
 
-    });
-    let child=document.getElementById(`description${index}`)
+          });
+          let child = document.getElementById(`description${index}`)
 
-    child.appendChild(detailsButton);
-  }
-  else{
-  }
-  })
-})};
+          child.appendChild(detailsButton);
+          $('.response').text(countResults + " movies found");
+
+        }
+        else {
+          if (index === 0) {
+
+            let parent = document.getElementById(`cardsHolder_`)
+            removeAllChildNodes(parent);
+        $('.response').text("0 movies found");
+
+          }
+        }
+
+      })
+    })
+};
+
 //RENDER CAROUSEL GAMES
 function renderCarousel(response) {
   console.log(response)
@@ -194,17 +211,17 @@ function renderCarousel(response) {
       <p>${card.description}</p>
     </div>
     `
-    document.getElementById('carousel').appendChild(cardDiv);
-    var button = document.createElement('button');
-    button.classList.add('btn')
-    button.classList.add('btn-sm')
-    button.classList.add('btn-warning')
-    button.classList.add('customB_')
-    button.innerHTML="More"
-    button.addEventListener('click',function(){
-      openMe(card)
-    })
-    document.getElementById(`carousel_caption${index}`).appendChild(button);
+      document.getElementById('carousel').appendChild(cardDiv);
+      var button = document.createElement('button');
+      button.classList.add('btn')
+      button.classList.add('btn-sm')
+      button.classList.add('btn-warning')
+      button.classList.add('customB_')
+      button.innerHTML = "More"
+      button.addEventListener('click', function () {
+        openMe(card)
+      })
+      document.getElementById(`carousel_caption${index}`).appendChild(button);
     }
     else {
       cardDiv.classList.add("item");
@@ -224,12 +241,13 @@ function renderCarousel(response) {
       button.classList.add('btn-sm')
       button.classList.add('btn-warning')
       button.classList.add('customB_')
-      button.innerHTML="More"
-      button.addEventListener('click',function(){
+      button.innerHTML = "More"
+      button.addEventListener('click', function () {
         openMe(card)
       })
       document.getElementById(`carousel_caption${index}`).appendChild(button);
-    }})
+    }
+  })
 
 
 
@@ -239,6 +257,8 @@ function hideAllElements() {
   document.getElementById('watchList').style.display = 'none'
   document.getElementById('video').style.display = 'none'
   document.getElementById('movieDetails').style.display = 'none'
+  document.getElementById('loading__').style.display = 'none'
+
 }
 function back() {
   document.getElementById('watchList').style.display = 'none'
