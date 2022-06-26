@@ -334,6 +334,14 @@ margin-bottom: 70px;
   background-size: contain;
   background-repeat: no-repeat;
 }
+#video{
+  height: 400px;
+  width:100%;
+  border: none;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
 .customB_{
   margin-top: 10px;
   border-radius: 20px;

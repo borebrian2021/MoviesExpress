@@ -6,8 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
   //     // handle the click event
   //     console.log('clicked');
   // });
+
+//PLAY IFRAME
+function play(){
+
+  var iframe= document.getElementById('mPoster').style.display = 'none'
+  
+  var iframe= document.getElementById('video').style.display = 'block'
+ 
+ }
+
   hideAllElements()
   fetchMoviesDetails()
+  const playB= document.getElementById('youtube').addEventListener('click',function(){
+  play();
+ })
 
 });
 //OPERN MOVIE DETAILS
@@ -24,45 +37,47 @@ function openMe(data) {
   const producers = document.getElementById("producers");
   const ratingParent = document.getElementById("ratingParent");
   const wholeCard = document.getElementById("movieDetails");
+  const youtube = document.getElementById("youtube");
+
 
 
   //SET DATA
   poster.style.backgroundImage = `url('${data.poster}')`
-  director.innerHTML=data.director
+  director.innerHTML = data.director
   actor.src = data.producerPoster
-
-  title.innerHTML=data.title
-  genre.innerHTML=data.genre
-  description.innerHTML=data.description
-  date.innerHTML=data.releaseDate
-  lenght.innerHTML=data.lenght
-  producers.innerHTML=data.producers
-
+  youtube.setAttribute("href", data.youtube)
+  title.innerHTML = data.title
+  genre.innerHTML = data.genre
+  description.innerHTML = data.description
+  date.innerHTML = data.releaseDate
+  lenght.innerHTML = data.lenght
+  producers.innerHTML = data.producers
+  document.getElementById('video').src=data.youtube
   //LOOP ON RATES
   renderRates(data.rates)
-  
+
 }
 
 //RATES LOOPING FUNCTION
-function renderRates(rates){
-  
-  const ratesHolder=document.getElementById('ratingParent');
+function renderRates(rates) {
+
+  const ratesHolder = document.getElementById('ratingParent');
   removeAllChildNodes(ratesHolder)
-  for(let i=0; i<5; i++){
-if(i<rates){
-  ratesHolder.remo
-  var rateImage = document.createElement('img');
-  rateImage.classList.add('star')
-  rateImage.src='./assets/images/rate.png'
-  ratesHolder.appendChild(rateImage)
-  
-}
-else{
-  var rateImage = document.createElement('img');
-  rateImage.classList.add('star')
-  rateImage.src='./assets/images/unrate.png'
-  ratesHolder.appendChild(rateImage)
-}
+  for (let i = 0; i < 5; i++) {
+    if (i < rates) {
+      ratesHolder.remo
+      var rateImage = document.createElement('img');
+      rateImage.classList.add('star')
+      rateImage.src = './assets/images/rate.png'
+      ratesHolder.appendChild(rateImage)
+
+    }
+    else {
+      var rateImage = document.createElement('img');
+      rateImage.classList.add('star')
+      rateImage.src = './assets/images/unrate.png'
+      ratesHolder.appendChild(rateImage)
+    }
 
 
   }
@@ -71,7 +86,7 @@ else{
 //REMOVE RATES
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
+    parent.removeChild(parent.firstChild);
   }
 }
 //FETCH MOVIE LIST FROM AN API
@@ -92,13 +107,13 @@ function fetchMoviesDetails() {
 //RENDER MOVIE CARDS
 function renderCards(response) {
   console.log(response)
-  response.map((card,index,records) => {
+  response.map((card, index, records) => {
     var cardDiv = document.createElement('div');
     cardDiv.innerHTML = ` <div class="card">
       <img class="full" src="${card.poster}"/>
       <div class="description" id="description${index}">
         <h5>${card.title}</h5>
-        <small>${card.description.split(' ').slice(0, 15).join(' ')+'...'}</small><br/>
+        <small>${card.description.split(' ').slice(0, 15).join(' ') + '...'}</small><br/>
     
       </div>
     </div>`
@@ -109,28 +124,28 @@ function renderCards(response) {
     detailsButton.classList.add("btn-warning");
     detailsButton.classList.add("customB");
 
-    detailsButton.innerText="More"
+    detailsButton.innerText = "More"
     detailsButton.addEventListener('click', function (e) {
-              openMe(card)
-              // alert("working")
-  
-            });
+      openMe(card)
+      // alert("working")
+
+    });
     document.getElementById(`description${index}`).appendChild(detailsButton);
 
-   
+
   })
 }
 
 
-  //RENDER CAROUSEL GAMES
-  function renderCarousel(response) {
-    console.log(response)
-    response.map((card,index) => {
+//RENDER CAROUSEL GAMES
+function renderCarousel(response) {
+  console.log(response)
+  response.map((card, index) => {
 
-      var cardDiv = document.createElement('div');
-      
-      
-      if(index===1){
+    var cardDiv = document.createElement('div');
+
+
+    if (index === 1) {
       cardDiv.classList.add("item");
       cardDiv.classList.add("active");
       cardDiv.innerHTML =
@@ -145,11 +160,11 @@ function renderCards(response) {
     </div>
  
     `
-      }
-      else{
-        cardDiv.classList.add("item");
-        cardDiv.innerHTML =
-          ` 
+    }
+    else {
+      cardDiv.classList.add("item");
+      cardDiv.innerHTML =
+        ` 
      
       <img src="${card.carousel}" alt="Los Angeles" style="width:100%;">
       <div class="carousel-caption">
@@ -160,46 +175,20 @@ function renderCards(response) {
       </div>
    
       `
-      }
-     
-      document.getElementById('carousel').appendChild(cardDiv);
-    })
+    }
+
+    document.getElementById('carousel').appendChild(cardDiv);
+  })
 
 
-    
-    // for (let i = 0; i < response.length; i++) {
-    //       console.log(response[i].title)
-    //       let beerName_ = response[i].name;
-    //       const unoderedList = document.getElementById("cardsHolder");
-    //       const createCard = document.createElement("li");
-    //       list.addEventListener('click', function (e) {
-    //         openMe(response[i])
-    //         // alert("working")
 
-    //       });
-    //       list.innerHTML = beerName_
-    //       unoderedList.appendChild(list)
-    //     }
+}
 
-    // let beerName_ = response[0].name;
-    // let beerImag_ = response[0].image_url
-    // let beerDescription_ = response[0].description
-    // let reviews_ = response[0].reviews
-    // const beerName = document.getElementById("beer-name");
-    // const beerDescription = document.getElementById("beer-description");
-    // const beerImage = document.getElementById("beer-image");
-    // beerName.innerText = beerName_;
-    // beerDescription.innerText = beerDescription_;
-    // beerImage.innerText = beerDescription_;
-    // beerImage.src = beerImag_;
-    // renderBeerReviews(reviews_)
-  }
-
-
-  function hideAllElements() {
-    document.getElementById('watchList').style.display = 'none'
-    // document.getElementById('movieDetails').style.display = 'none'
-  }
+function hideAllElements() {
+  document.getElementById('watchList').style.display = 'none'
+  document.getElementById('video').style.display = 'none'
+  // document.getElementById('movieDetails').style.display = 'none'
+}
 
 // function renderNameOfTheBeer(response) {
 
