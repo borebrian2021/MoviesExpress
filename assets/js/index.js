@@ -10,6 +10,33 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchMoviesDetails()
 
 });
+//OPERN MOVIE DETAILS
+function openMe(data) {
+
+  const poster = document.getElementById("mPoster");
+  const director = document.getElementById("director");
+  const actor = document.getElementById("actor");
+  const title = document.getElementById("title");
+  const genre = document.getElementById("genre");
+  const description = document.getElementById("description");
+  const date = document.getElementById("date");
+  const lenght = document.getElementById("lenght");
+  const producers = document.getElementById("producers");
+  const ratingParent = document.getElementById("ratingParent");
+  const wholeCard = document.getElementById("movieDetails");
+
+
+  //SET DATA
+  
+  poster.style.backgroundImage = `url('${data.poster}')`
+  director.innerHTML=data.director
+  actor.style.backgroundImage = `url('${data.producerPoster}')`
+  title.innerHTML=data.title
+  genre.innerHTML=data.
+  // wholeCard.style.backgroundImage = `url('${data.poster}')`
+  renderBeerReviews(reviews_)
+
+}
 
 //FETCH MOVIE LIST FROM AN API
 function fetchMoviesDetails() {
@@ -29,18 +56,32 @@ function fetchMoviesDetails() {
 //RENDER MOVIE CARDS
 function renderCards(response) {
   console.log(response)
-  response.map(card => {
+  response.map((card,index,records) => {
     var cardDiv = document.createElement('div');
     cardDiv.innerHTML = ` <div class="card">
       <img class="full" src="${card.poster}"/>
-      <div class="description">
+      <div class="description" id="description${index}">
         <h5>${card.title}</h5>
-        <small>${card.description.split(' ').slice(0, 15).join(' ')}</small><br/>
-        <button class="btn btn-sm btn-warning customB" onclick=(alert("Working"))>More</button>
+        <small>${card.description.split(' ').slice(0, 15).join(' ')+'...'}</small><br/>
     
       </div>
     </div>`
     document.getElementById('cardsHolder_').appendChild(cardDiv);
+    var detailsButton = document.createElement('button');
+    detailsButton.classList.add("btn");
+    detailsButton.classList.add("btn-sm");
+    detailsButton.classList.add("btn-warning");
+    detailsButton.classList.add("customB");
+
+    detailsButton.innerText="More"
+    detailsButton.addEventListener('click', function (e) {
+              openMe(card)
+              // alert("working")
+  
+            });
+    document.getElementById(`description${index}`).appendChild(detailsButton);
+
+   
   })
 }
 
@@ -88,6 +129,8 @@ function renderCards(response) {
       document.getElementById('carousel').appendChild(cardDiv);
     })
 
+
+    
     // for (let i = 0; i < response.length; i++) {
     //       console.log(response[i].title)
     //       let beerName_ = response[i].name;
@@ -119,7 +162,7 @@ function renderCards(response) {
 
   function hideAllElements() {
     document.getElementById('watchList').style.display = 'none'
-    document.getElementById('movieDetails').style.display = 'none'
+    // document.getElementById('movieDetails').style.display = 'none'
   }
 
 // function renderNameOfTheBeer(response) {

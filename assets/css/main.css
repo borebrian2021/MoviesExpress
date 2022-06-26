@@ -330,6 +330,10 @@ margin-bottom: 70px;
   position: relative;
 
 }
+#movieDetails{
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .customB_{
   margin-top: 10px;
   border-radius: 20px;
