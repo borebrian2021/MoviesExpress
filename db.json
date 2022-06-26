@@ -11,7 +11,8 @@
       "lenght":"1:45",
       "poster": "https://www2.beatzjam.com/wp-content/uploads/2022/06/0-6.jpg",
       "producerPoster":"https://images-na.ssl-images-amazon.com/images/S/amzn-author-media-prod/4237evohdno3t2rsouqb5med7r.jpg",
-     "youtube":""
+     "youtube":"",
+     "carousel":"https://cdn.flickeringmyth.com/wp-content/uploads/2022/06/The-Man-From-Toronto-EW-poster-1.jpg"
     }
     ,
     {
@@ -26,6 +27,9 @@
       "poster": "https://upload.wikimedia.org/wikipedia/en/3/31/Interceptor_%28film%29.jpg",
       "producerPoster":"https://bgr.com/wp-content/uploads/2022/06/rsz_interceptor_dsc0117r.jpg?quality=82&strip=all"
      , "youtube":""
+     ,"carousel":"https://www.joblo.com/wp-content/uploads/2022/06/interceptor-pataky-review-poster-1280x720.jpg"
+
+
     }
     ,
     {
@@ -39,7 +43,9 @@
       "rates":"2.5",
       "poster": "https://upload.wikimedia.org/wikipedia/en/3/31/Interceptor_%28film%29.jpg",
       "producerPoster":"https://bgr.com/wp-content/uploads/2022/06/rsz_interceptor_dsc0117r.jpg?quality=82&strip=all",   
-       "youtube":"https://www.youtube.com/watch?v=_q0VIf-D2bc"
+       "youtube":"https://www.youtube.com/watch?v=_q0VIf-D2bc",
+     "carousel":"https://fictionhorizon.com/wp-content/uploads/2022/02/Restless-2022-netflix-poster.jpg"
+       
       
     }
     ,
@@ -54,8 +60,9 @@
       "rates":"3",
       "poster": "https://upload.wikimedia.org/wikipedia/en/3/31/Interceptor_%28film%29.jpg",
       "producerPoster":"https://bgr.com/wp-content/uploads/2022/06/rsz_interceptor_dsc0117r.jpg?quality=82&strip=all",   
-       "youtube":""
-      
+       "youtube":"",
+     "carousel":"http://digitalspyuk.cdnds.net/16/30/480x240/landscape-1465473714-ghost-rider-marvel.jpg"
+     
     }
     ,
     {
@@ -69,7 +76,9 @@
       "rates":"4",
       "poster": "https://i.pinimg.com/564x/aa/7a/94/aa7a94a1f65a45bf4487f2fc33e9c5db.jpg",
       "producerPoster":"https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yOTYyNjcyNS9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY5MTk1NDI0OH0.otC-OTjgG_FiSUVmy-VgU8Z0SDnDwir-5OcJgVR9Oog/img.jpg?width=1500&coordinates=342%2C0%2C386%2C0&height=2000",   
-       "youtube":"https://www.youtube.com/watch?v=nu6R7ypaz5g"
+       "youtube":"https://www.youtube.com/watch?v=nu6R7ypaz5g",
+     "carousel":"http://digitalspyuk.cdnds.net/16/30/480x240/landscape-1465473714-ghost-rider-marvel.jpg"
+
       
     }
     ,
@@ -84,7 +93,9 @@
       "rates":"1.5",
       "poster": "https://www.bollywoodhungama.com/wp-content/uploads/2022/05/Heropanti-2-Box-Office-Estimate-Day-6.jpg",
       "producerPoster":"https://i0.wp.com/urbanasian.com/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-02-at-1.59.10-PM.jpeg?resize=640%2C960&ssl=1",
-       "youtube":"https://www.youtube.com/watch?v=Faz9PrY6xF8"
+       "youtube":"https://www.youtube.com/watch?v=Faz9PrY6xF8",
+     "carousel":"https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2021/03/tiger-shroff-heropanti-1614689865.jpg"
+
       
     }
   ]}

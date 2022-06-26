@@ -18,19 +18,20 @@ function fetchMoviesDetails() {
       return response.json();
     })
     .then(function (data) {
-       
+
       // console.log(data)
-      return appllyData(data);
+      renderCarousel(data)
+      return renderCards(data);
     });
 }
 
 
 //RENDER MOVIE CARDS
-function appllyData(response) {
-    console.log(response)
-    response.map(card=> {
-      var cardDiv = document.createElement('div');
-      cardDiv.innerHTML = ` <div class="card">
+function renderCards(response) {
+  console.log(response)
+  response.map(card => {
+    var cardDiv = document.createElement('div');
+    cardDiv.innerHTML = ` <div class="card">
       <img class="full" src="${card.poster}"/>
       <div class="description">
         <h5>${card.title}</h5>
@@ -39,9 +40,33 @@ function appllyData(response) {
     
       </div>
     </div>`
-      document.getElementById('cardsHolder_').appendChild(cardDiv);
-    })
+    document.getElementById('cardsHolder_').appendChild(cardDiv);
+  })
+}
 
+
+  //RENDER CAROUSEL GAMES
+  function renderCarousel(response) {
+    console.log(response)
+    response.map((card,index) => {
+
+      var cardDiv = document.createElement('div');
+      
+      if(index===1){
+        cardDiv.innerHTML =
+        ` 
+    <div class="item active">
+    <img src="${card.carousel}">
+    <div class="carousel-caption">
+      <h3>${card.title}</h3>
+      <p>${card.description}</p>
+    </div>
+    </div> 
+    `
+      }
+     
+      document.getElementById('carousel').appendChild(cardDiv);
+    })
 
     // for (let i = 0; i < response.length; i++) {
     //       console.log(response[i].title)
@@ -51,7 +76,7 @@ function appllyData(response) {
     //       list.addEventListener('click', function (e) {
     //         openMe(response[i])
     //         // alert("working")
-      
+
     //       });
     //       list.innerHTML = beerName_
     //       unoderedList.appendChild(list)
@@ -69,13 +94,13 @@ function appllyData(response) {
     // beerImage.innerText = beerDescription_;
     // beerImage.src = beerImag_;
     // renderBeerReviews(reviews_)
-}
+  }
 
 
-function hideAllElements() {
-  document.getElementById('watchList').style.display = 'none'
-  document.getElementById('movieDetails').style.display = 'none'
-}
+  function hideAllElements() {
+    document.getElementById('watchList').style.display = 'none'
+    document.getElementById('movieDetails').style.display = 'none'
+  }
 
 // function renderNameOfTheBeer(response) {
 
