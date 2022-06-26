@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
   box-sizing: border-box;
   margin: 0;
@@ -5,6 +6,7 @@ body {
   font-size: 14px;
   color: #e49a04;
   background-color: #2b2b31;
+  font-family: Montserrat !important;
 }
 .m-text{
   margin:40px 0 10px 40px;
@@ -381,7 +383,7 @@ margin-bottom: 70px;
   border-radius: 20px;
   background-color: transparent;
   color: #e49a04;
-  outline: none;
+  outline: none !important;
 }
 .customBB:active{
   margin-top: 10px;

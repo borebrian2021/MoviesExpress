@@ -126,7 +126,6 @@ function renderCards(response) {
     detailsButton.addEventListener('click', function (e) {
       openMe(card)
       // alert("working")
-
     });
     document.getElementById(`description${index}`).appendChild(detailsButton);
 
@@ -135,48 +134,102 @@ function renderCards(response) {
 }
 
 
+//PERFORM DATA SEARCH
+function searchRecords(query) {
+  fetch(BASE_URL)
+    .then(function (response) {
+      return response.json();
+    }).then(function (response_) {
+
+      // console.log(data)
+   
+  // console.log(response_)
+    response_.map((card, index, records) => {
+    console.log(card);
+    if(card.title.includes(query) || card.description.includes(query)){
+      let parent=document.getElementById(`cardsHolder_`)
+      removeAllChildNodes(parent);
+    var cardDiv = document.createElement('div');
+    cardDiv.innerHTML = ` <div class="card">
+      <img class="full" src="${card.poster}"/>
+      <div class="description" id="description${index}">
+        <h5>${card.title}</h5>
+        <small>${card.description.split(' ').slice(0, 15).join(' ') + '...'}</small><br/>
+    
+      </div>
+    </div>`
+    document.getElementById('cardsHolder_').appendChild(cardDiv);
+    var detailsButton = document.createElement('button');
+    detailsButton.classList.add("btn");
+    detailsButton.classList.add("btn-sm");
+    detailsButton.classList.add("btn-warning");
+    detailsButton.classList.add("customB");
+    detailsButton.innerText = "More"
+    detailsButton.addEventListener('click', function (e) {
+      openMe(card)
+      // alert("working")
+
+    });
+    let child=document.getElementById(`description${index}`)
+
+    child.appendChild(detailsButton);
+  }
+  else{
+  }
+  })
+})};
 //RENDER CAROUSEL GAMES
 function renderCarousel(response) {
   console.log(response)
   response.map((card, index) => {
-
     var cardDiv = document.createElement('div');
-
-
     if (index === 1) {
       cardDiv.classList.add("item");
       cardDiv.classList.add("active");
       cardDiv.innerHTML =
         ` 
-   
     <img src="${card.carousel}" alt="Los Angeles" style="width:100%;">
-    <div class="carousel-caption">
+    <div class="carousel-caption" id="carousel_caption${index}">
       <h3>${card.title}</h3>
       <p>${card.description}</p>
-      <button class="btn btn-sm btn-warning customB_">More</button>
-
     </div>
- 
     `
+    document.getElementById('carousel').appendChild(cardDiv);
+    var button = document.createElement('button');
+    button.classList.add('btn')
+    button.classList.add('btn-sm')
+    button.classList.add('btn-warning')
+    button.classList.add('customB_')
+    button.innerHTML="More"
+    button.addEventListener('click',function(){
+      openMe(card)
+    })
+    document.getElementById(`carousel_caption${index}`).appendChild(button);
     }
     else {
       cardDiv.classList.add("item");
       cardDiv.innerHTML =
-        ` 
-     
-      <img src="${card.carousel}" alt="Los Angeles" style="width:100%;">
-      <div class="carousel-caption">
+        `  <img src="${card.carousel}" alt="Los Angeles" style="width:100%;">
+      <div class="carousel-caption" id="carousel_caption${index}">
         <h3>${card.title}</h3>
         <p>${card.description}</p>
-      <button class="btn btn-sm btn-warning customB_">More</button>
 
       </div>
    
       `
-    }
+      document.getElementById('carousel').appendChild(cardDiv);
 
-    document.getElementById('carousel').appendChild(cardDiv);
-  })
+      var button = document.createElement('button');
+      button.classList.add('btn')
+      button.classList.add('btn-sm')
+      button.classList.add('btn-warning')
+      button.classList.add('customB_')
+      button.innerHTML="More"
+      button.addEventListener('click',function(){
+        openMe(card)
+      })
+      document.getElementById(`carousel_caption${index}`).appendChild(button);
+    }})
 
 
 

@@ -47,6 +47,7 @@ $("#back").click(function() {
    
 
 });
-$("input").change(function(){
-    alert("The text has been changed.");
+$("#searchButton").click(function(){
+    searchRecords($('#search').val());
+    // alert();
   });
