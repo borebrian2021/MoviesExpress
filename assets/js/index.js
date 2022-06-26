@@ -1,41 +1,50 @@
 
-
-  document.addEventListener('DOMContentLoaded', () => {
-    // let btn = document.getElementById('btn');
-    // btn.addEventListener('click', () => {
-    //     // handle the click event
-    //     console.log('clicked');
-    // });
-
-    hideAllElements()
+const BASE_URL = "https://expressmovies254.herokuapp.com/movies"
+document.addEventListener('DOMContentLoaded', () => {
+  // let btn = document.getElementById('btn');
+  // btn.addEventListener('click', () => {
+  //     // handle the click event
+  //     console.log('clicked');
+  // });
+  hideAllElements()
+  fetchMoviesDetails()
 
 });
-
-
-function hideAllElements(){
-    document.getElementById('watchList').style.display='none'
-    document.getElementById('movieDetails').style.display='none'
+function fetchMoviesDetails() {
+  fetch(BASE_URL)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      // appllyData(data)
+      console.log(data)
+      return renderNameOfTheBeer(data);
+    });
+}
+function hideAllElements() {
+  document.getElementById('watchList').style.display = 'none'
+  document.getElementById('movieDetails').style.display = 'none'
 }
 
-// function renderNameOfTheBeer(response) {
+function renderNameOfTheBeer(response) {
 
-//     console.log(response.length)
-//     console.log(response);
-//     for (let i = 0; i < response.length; i++) {
-//         console.log(response[i].name)
-//         let beerName_ = response[i].name;
-//         const unoderedList = document.getElementById("beer-list");
-//         const list = document.createElement("li");
-//         list.addEventListener('click', function (e) {
-//             openMe(response[i])
-//             // alert("working")
+  console.log(response.length)
+  console.log(response);
+  for (let i = 0; i < response.length; i++) {
+    console.log(response[i].name)
+    let beerName_ = response[i].name;
+    const unoderedList = document.getElementById("beer-list");
+    const list = document.createElement("li");
+    list.addEventListener('click', function (e) {
+      openMe(response[i])
+      // alert("working")
 
-//           });
-//         list.innerHTML = beerName_
-//         unoderedList.appendChild(list)
-//     }
+    });
+    list.innerHTML = beerName_
+    unoderedList.appendChild(list)
+  }
 
-// }
+}
 // function renderBeerReviews(reviews_) {
 //     const unoderedList = document.getElementById("review-list");
 //     reviews_.forEach(element => {
@@ -80,16 +89,7 @@ function hideAllElements(){
 //     renderBeerReviews(reviews_)
 
 // }
-// function fetchBeerDetails() {
-//     fetch('https://expressmovies254.herokuapp.com/beers')
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             appllyData(data)
-//             return renderNameOfTheBeer(data);
-//         });
-// }
+
 // document.getElementById('update').addEventListener('click', editBeer);
 
 // function editBeer() {
