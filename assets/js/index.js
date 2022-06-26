@@ -32,9 +32,17 @@ function openMe(data) {
   director.innerHTML=data.director
   actor.style.backgroundImage = `url('${data.producerPoster}')`
   title.innerHTML=data.title
-  genre.innerHTML=data.
+  genre.innerHTML=data.genre
+  description.innerHTML=data.description
+  date.innerHTML=data.releaseDate
+  lenght.innerHTML=data.lenght
+  // producers.innerHTML=data.producers
+  // alert(data.producers)
+  console.log(data)
+  // ratingParent.innerHTML=data.
+  
   // wholeCard.style.backgroundImage = `url('${data.poster}')`
-  renderBeerReviews(reviews_)
+  // renderBeerReviews(reviews_)
 
 }
 
