@@ -39,16 +39,41 @@ function openMe(data) {
   producers.innerHTML=data.producers
 
   //LOOP ON RATES
-  renderRates()
-
-
+  renderRates(data.rates)
+  
 }
 
 //RATES LOOPING FUNCTION
-function renderRates(){
-
+function renderRates(rates){
+  
+  const ratesHolder=document.getElementById('ratingParent');
+  removeAllChildNodes(ratesHolder)
+  for(let i=0; i<5; i++){
+if(i<rates){
+  ratesHolder.remo
+  var rateImage = document.createElement('img');
+  rateImage.classList.add('star')
+  rateImage.src='./assets/images/rate.png'
+  ratesHolder.appendChild(rateImage)
+  
+}
+else{
+  var rateImage = document.createElement('img');
+  rateImage.classList.add('star')
+  rateImage.src='./assets/images/unrate.png'
+  ratesHolder.appendChild(rateImage)
 }
 
+
+  }
+}
+
+//REMOVE RATES
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
+}
 //FETCH MOVIE LIST FROM AN API
 function fetchMoviesDetails() {
   fetch(BASE_URL)

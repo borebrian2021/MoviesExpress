@@ -1,68 +1,68 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title >Moview</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Great+Vibes%7COpen+Sans:400,600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- <link rel="stylesheet" href="./assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
-    
-    <link rel="stylesheet" href="./">
-    <meta name="theme-color" content="#7B241C">
-    <meta name="msapplication-navbutton-color" content="#7B241C">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#7B241C">
-    <script defer type="text/javascript" src="src/index.js"></script>
-  </head>
-  <body>
-    <nav>
-      <div class="nav_left p-2">
-      <img src="./assets/images/logo__.png" class="logo"/> 
 
-          <!-- <img class="logo" src="./assets/images/logo.png"> &nbsp; -->
+<head>
+  <meta charset="UTF-8" />
+  <title>Moview</title>
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes%7COpen+Sans:400,600&display=swap" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="./assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+
+  <link rel="stylesheet" href="./">
+  <meta name="theme-color" content="#7B241C">
+  <meta name="msapplication-navbutton-color" content="#7B241C">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#7B241C">
+  <script defer type="text/javascript" src="src/index.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="nav_left p-2">
+      <img src="./assets/images/logo__.png" class="logo" />
+
+      <!-- <img class="logo" src="./assets/images/logo.png"> &nbsp; -->
+    </div>
+    <div class="nav_right">
+      <!-- <h2 class=" " onclick="gotoHome()" id="name"> Moview</h2> -->
+
+      <a href="https://github.com/borebrian2021"><img class="logo__" src="./assets/images/verify.png"></a>
+
+
+
+
+      <p class="white" id="name"></p>
+    </div>
+
+  </nav>
+
+
+  <div class="container-fluid text-left">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-m-6 col-lg-6">
+        <h2 class="m-text">Moview</h2>
+        <h5 class="n-text">Explore Movies & TV shows. </h6>
+          <h6 class="n-text">Every movie night begins with a time-consuming and
+            stressful search for where to explore  movies. Moview  is here to help
+            you locate all the movies you can legally stream. Making your life
+            easier.</h6>
+          <input class="form-control n-text  width" placeholder="Search movie by name" />
+          <button class="btn btn-warning btn-sm n-text"><i class="fa fa-search"></i>&nbsp;Search</button>
       </div>
-      <div class="nav_right">
-        <!-- <h2 class=" " onclick="gotoHome()" id="name"> Moview</h2> -->
-
-         <a href="https://github.com/borebrian2021"><img class="logo__" src="./assets/images/verify.png"></a>
-        
-          
-
-
-          <p class="white" id="name"></p>
-      </div>
-
-    </nav>
-   
-
-    <div class="container-fluid text-left">
-<div class="row">
-<div class="col-12 col-sm-6 col-m-6 col-lg-6"><h2 class="m-text">Moview</h2>
-<h5 class="n-text">Explore Movies & TV shows. </h6>
-<h6 class="n-text">Every movie night begins with a time-consuming and 
-  stressful search for where to explore  movies. Moview  is here to help
-   you locate all the movies you can legally stream. Making your life
-   easier.</h6>
-<input class="form-control n-text  width" placeholder="Search movie by name"/>
-<button class="btn btn-warning btn-sm n-text"><i class="fa fa-search"></i>&nbsp;Search</button>
-</div>
-<div class="col-12  col-sm-6 col-m-6 col-lg-6">
-<div class="container-fluid">
-  <h4>Featured Movies</h4>
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner " id="carousel">
-      <!-- <div class="item active">
+      <div class="col-12  col-sm-6 col-m-6 col-lg-6">
+        <div class="container-fluid">
+          <h4>Featured Movies</h4>
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner " id="carousel">
+              <!-- <div class="item active">
         <img src="./assets/Images/movie.jpg" alt="Los Angeles" style="width:100%;">
         <div class="carousel-caption">
           <h3>Los Angeles</h3>
@@ -70,29 +70,29 @@
         </div>
       </div> -->
 
- 
-  
-  
-    </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
+
+
+            </div>
+
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-</div>
-</div>
-    </div>
-    <div class=" split card_left"  id="cardsHolder_">
+  <div class=" split card_left" id="cardsHolder_">
 
 
-      <!-- <div class="card">
+    <!-- <div class="card">
   <img class="full" src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7"/>
   <div class="description">
     <h5>Fas &  Furious</h5>
@@ -101,154 +101,172 @@
 
   </div>
 </div> -->
-     
+
+  </div>
+  <div class=" movie_details card_left" id="movieDetails">
+
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="container" id="mPoster"
+          style="background:url(./assets/Images/simpsons.jpg);background-repeat:no-repeat;">
+
+
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-12">
+        <img src="./assets/Images/statham.jpg" id="actor" class="avatar" />
+        <h4 class="white"></h4>
+        <h2 id="title">The simpsons</h2>
+        <h5 class="text-white"><span id="genre">Action</span> | <span id="date" class="white"></span>| <span id="lenght"
+            class="white">1h 30m</span> </h5>
+        <h6 class="text-white" id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt est sequi
+          incidunt, beatae animi hic sit cumque itaque obcaecati officia aliquam iure. Mollitia, eligendi minima quam
+          quae exercitationem nulla nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloremque eum
+          facilis adipisci maiores nisi. Exercitationem, modi. Molestiae nostrum nulla debitis porro placeat nihil
+          aliquam, possimus, quasi laudantium id perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Quis voluptates deserunt necessitatibus repellendus veniam, illum, ipsa hic velit aperiam voluptatem, maxime
+          enim exercitationem atque voluptate blanditiis aliquid obcaecati quo tempora. Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Nam doloribus ea deserunt assumenda dolore dignissimos accusamus laboriosam
+          beatae officia impedit rem delectus expedita culpa cum deleniti cumque consequuntur, voluptas error.</h6>
+        <small><span class="white">Director : </span><span id="director">John Williams</span></small><br />
+        <small><span class="white">Producer : </span><span id="producers">Sharon Davidson</span></small><br />
+
+
+
+        <div class="desText">
+          <div class="ratings" id="ratingParent">
+            <!-- <div><img class="star" src="./assets/Images/rate.png"></div>
+    <div><img class="star" src="./assets/Images/rate.png"></div>
+    <div><img class="star" src="./assets/Images/unrate.png"></div>
+    <div><img class="star" src="./assets/Images/unrate.png"></div>
+    <div><img class="star" src="./assets/Images/unrate.png"></div> -->
+
+
+
+
+          </div>
+
+
+
+          <div class="loveMe">
+            <div class="icons_">
+              <div class="icons">
+                <img src="./assets/Images/add_.png" class="btns" />
+              </div>
+              <div class="icons">
+                <img src="./assets/Images/sharer.png" class="btns" />
+              </div>
+
+              <div class="icons">
+                <img src="./assets/Images/youtube.png" class="btns" />
+              </div>
+              <div  class="icons">
+             <a id="youtube"> <img src="./assets/Images/love _frame.png" class="btns" /></a> 
+              </div>
+             
+            </div>
+
+
+          </div>
+          <div class="loveLeft">
+            <img src="./assets/Images/loveBig.png" class="loveBig" />
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div class=" movie_details card_left" id="movieDetails">
-
-<div class="row">
-<div class="col-lg-4 col-md-4 col-12">
-  <div class="container" id="mPoster" style="background:url(./assets/Images/simpsons.jpg);background-repeat:no-repeat;">
-   
-   
-</div>
-</div>
-<div class="col-lg-8 col-md-8 col-12">
-  <img src="./assets/Images/statham.jpg" id="actor" class="avatar"/>
-  <h4 class="white" ></h4>
-<h2 id="title">The simpsons</h2>
-<h5 class="text-white"><span id="genre">Action</span> |  <span id="date" class="white"></span>|  <span id="lenght" class="white">1h 30m</span> </h5>  
-<h6 class="text-white" id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt est sequi incidunt, beatae animi hic sit cumque itaque obcaecati officia aliquam iure. Mollitia, eligendi minima quam quae exercitationem nulla nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Id doloremque eum facilis adipisci maiores nisi. Exercitationem, modi. Molestiae nostrum nulla debitis porro placeat nihil aliquam, possimus, quasi laudantium id perferendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis voluptates deserunt necessitatibus repellendus veniam, illum, ipsa hic velit aperiam voluptatem, maxime enim exercitationem atque voluptate blanditiis aliquid obcaecati quo tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam doloribus ea deserunt assumenda dolore dignissimos accusamus laboriosam beatae officia impedit rem delectus expedita culpa cum deleniti cumque consequuntur, voluptas error.</h6>
-<small><span class="white">Director : </span><span id="director">John Williams</span></small><br/>
-<small><span class="white">Producer : </span><span id="producers">Sharon Davidson</span></small><br/>
-
-
-
-<div class="desText">
-  <div class="ratings" id="ratingParent">
-    <div><img class="star" src="./assets/Images/rate.png"></div>
-    <div><img class="star" src="./assets/Images/rate.png"></div>
-    <div><img class="star" src="./assets/Images/unrate.png"></div>
-    <div><img class="star" src="./assets/Images/unrate.png"></div>
-    <div><img class="star" src="./assets/Images/unrate.png"></div>
-  
-  
-  
-  
-  </div>
-
-
-
-  <div class="loveMe">
-<div class="icons_">
-  <div class="icons">
-  <img src="./assets/Images/add_.png" class="btns"/>
-</div>
-  <div class="icons">
-    <img src="./assets/Images/share.png" class="btns"/>
-  </div>
-
-<div class="icons">
-  <img src="./assets/Images/github___.png" class="btns"/>
-</div
-<div class="icons">
-  <img src="./assets/Images/love _frame.png" class="btns"/>
-</div>
-
-
-</div> 
-<div class="loveLeft">
-  <img src="./assets/Images/loveBig.png" class="loveBig"/>
-</div>
-</div>
-</div>
-
-</div>
-
-      </div>
-      <div class=" watchListHolder card_left " id="watchList">
-<div class="watchList">
-  <h3>Fevourite movies</h3>
-  <div class="cardHolder">
-    
-      <div class="card">
-        <img class="full" src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7"/>
-        <div class="description">
-          <h5>Fas &  Furious</h5>
-          <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-          <button class="btn btn-sm btn-warning customB">Remove</button>
-          <button class="btn btn-sm btn-warning customB">More</button>
-
-      
-        </div>
-      </div>
-      <div class="card">
-        <img class="full" src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7"/>
-        <div class="description">
-          <h5>Fas &  Furious</h5>
-          <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-          <button class="btn btn-sm btn-warning customB">Remove</button>
-          <button class="btn btn-sm btn-warning customB">More</button>
-
-      
-        </div>
-      </div><div class="card">
-        <img class="full" src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7"/>
-        <div class="description">
-          <h5>Fas &  Furious</h5>
-          <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-          <button class="btn btn-sm btn-warning customB">Remove</button>
-          <button class="btn btn-sm btn-warning customB">More</button>
-
-      
-        </div>
-      </div><div class="card">
-        <img class="full" src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7"/>
-        <div class="description">
-          <h5>Fas &  Furious</h5>
-          <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
-          <button class="btn btn-sm btn-warning customB">Remove</button>
-          <button class="btn btn-sm btn-warning customB">More</button>
-
-      
-        </div>
-      </div>
-   
-
 
   </div>
- 
-</div>
+  <div class=" watchListHolder card_left " id="watchList">
+    <div class="watchList">
+      <h3>Fevourite movies</h3>
+      <div class="cardHolder">
 
+        <div class="card">
+          <img class="full"
+            src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7" />
+          <div class="description">
+            <h5>Fas & Furious</h5>
+            <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+            <button class="btn btn-sm btn-warning customB">Remove</button>
+            <button class="btn btn-sm btn-warning customB">More</button>
+
+
+          </div>
         </div>
-    <main>
-      <div class="beer-details">
-        <h2 id="beer-name">Beer Name Goes Here</h2>
-        <img
-          id="beer-image"
-          alt="Beer Name Goes Here"
-          src="assets/image-placeholder.jpg"
-        />
-        <p>
-          <em id="beer-description">Beer Description Goes Here</em>
-        </p>
-        <form id="description-form">
-          <label  for="description">Edited Description:</label>
-          <textarea id="description"></textarea>
-          <button type="submit" id="update" >Update Beer</button>
-        </form>
-        <h3>Customer Reviews</h3>
-        <ul id="review-list">
-        </ul>
-        <form id="review-form">
-          <label for="review">Your Review:</label>
-          <textarea id="review"></textarea>
-          <button type="submit" >Add review</button>
-        </form>
+        <div class="card">
+          <img class="full"
+            src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7" />
+          <div class="description">
+            <h5>Fas & Furious</h5>
+            <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+            <button class="btn btn-sm btn-warning customB">Remove</button>
+            <button class="btn btn-sm btn-warning customB">More</button>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <img class="full"
+            src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7" />
+          <div class="description">
+            <h5>Fas & Furious</h5>
+            <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+            <button class="btn btn-sm btn-warning customB">Remove</button>
+            <button class="btn btn-sm btn-warning customB">More</button>
+
+
+          </div>
+        </div>
+        <div class="card">
+          <img class="full"
+            src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7" />
+          <div class="description">
+            <h5>Fas & Furious</h5>
+            <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+            <button class="btn btn-sm btn-warning customB">Remove</button>
+            <button class="btn btn-sm btn-warning customB">More</button>
+
+
+          </div>
+        </div>
+
+
+
       </div>
-    </main>
-  </body>
-  <script src="./assets/js/index.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </div>
+
+  </div>
+  <main>
+    <div class="beer-details">
+      <h2 id="beer-name">Beer Name Goes Here</h2>
+      <img id="beer-image" alt="Beer Name Goes Here" src="assets/image-placeholder.jpg" />
+      <p>
+        <em id="beer-description">Beer Description Goes Here</em>
+      </p>
+      <form id="description-form">
+        <label for="description">Edited Description:</label>
+        <textarea id="description"></textarea>
+        <button type="submit" id="update">Update Beer</button>
+      </form>
+      <h3>Customer Reviews</h3>
+      <ul id="review-list">
+      </ul>
+      <form id="review-form">
+        <label for="review">Your Review:</label>
+        <textarea id="review"></textarea>
+        <button type="submit">Add review</button>
+      </form>
+    </div>
+  </main>
+</body>
+<script src="./assets/js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+  integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </html>
