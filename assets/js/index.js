@@ -8,18 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 
 //PLAY IFRAME
-function play(){
 
-  var iframe= document.getElementById('mPoster').style.display = 'none'
-  
-  var iframe= document.getElementById('video').style.display = 'block'
- 
- }
 
   hideAllElements()
   fetchMoviesDetails()
   const playB= document.getElementById('youtube').addEventListener('click',function(){
-  play();
  })
 
 });
@@ -114,6 +107,7 @@ function renderCards(response) {
       <div class="description" id="description${index}">
         <h5>${card.title}</h5>
         <small>${card.description.split(' ').slice(0, 15).join(' ') + '...'}</small><br/>
+        alert( "Handler for .click() called.")
     
       </div>
     </div>`
@@ -123,7 +117,6 @@ function renderCards(response) {
     detailsButton.classList.add("btn-sm");
     detailsButton.classList.add("btn-warning");
     detailsButton.classList.add("customB");
-
     detailsButton.innerText = "More"
     detailsButton.addEventListener('click', function (e) {
       openMe(card)
