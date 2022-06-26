@@ -163,6 +163,11 @@ margin-bottom: 70px;
   text-align: right;
   align-items: right;
 }
+.moviesSmall{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
 
 
 .nav .nav_left p img {
@@ -291,11 +296,24 @@ margin-bottom: 70px;
 .movie_details{
   padding: 10px;
   grid-gap: 10px;
+  margin-bottom: 20px;
   width: 94.5%;
   display: grid;
   /* height: 200px */
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background: linear-gradient(to right, #48290a ,#2b2b31  , #2b2b31 );
+  background-size: 200% 100%;
+
+}
+.watchListHolder{
+  padding: 10px;
+  grid-gap: 10px;
+  margin-bottom: 20px;
+  width: 94.5%;
+  display: grid;
+  /* height: 200px */
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  /* background: linear-gradient(to right, #48290a ,#2b2b31  , #2b2b31 ); */
   background-size: 200% 100%;
 
 }
@@ -315,8 +333,10 @@ margin-bottom: 70px;
 .customB{
   margin-top: 10px;
   border-radius: 20px;
-  background-color: #e49a04;
+  background-color: transparent;
   color: #2b2b31;
+  border: #e49a04 solid 1px;
+  color: #e49a04;
   outline: none;
 }
 .customB:active{
@@ -449,3 +469,9 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 200px;
   border:#f1a458 solid 2px;
 } */
+.cardHolder{
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-gap: 10px;
+
+}

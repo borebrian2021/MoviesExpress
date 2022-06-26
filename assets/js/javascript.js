@@ -14,7 +14,7 @@ var speed = 20;
 
 //DECLARATION OF FUNCTIONS HERE
 function hideElements() {
-  $('#aboutMe').hide();
+  $('#watchList').hide();
   $('#questions').hide();
   $('#final').hide();
   $('#questions').hide();

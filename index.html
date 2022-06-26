@@ -8,12 +8,10 @@
     />
     <!-- <link rel="stylesheet" href="./assets/css/bootstrap/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" href=".styles/main.css" />
-    <link rel="stylesheet" type="text/css" href="./assets/font-awesome/css/font-awesome.min.css"/>
-
-
+    
     <link rel="stylesheet" href="./">
     <meta name="theme-color" content="#7B241C">
     <meta name="msapplication-navbutton-color" content="#7B241C">
@@ -129,7 +127,7 @@
       </div>
      
     </div>
-    <div class=" movie_details card_left">
+    <div class=" movie_details card_left" id="movieDetails">
 
 <div class="row">
 <div class="col-lg-4 col-md-4 col-12">
@@ -205,6 +203,61 @@
 </div>
 
       </div>
+      <div class=" watchListHolder card_left " id="watchList">
+<div class="watchList">
+  <h3>Fevourite movies</h3>
+  <div class="cardHolder">
+    
+      <div class="card">
+        <img class="full" src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7"/>
+        <div class="description">
+          <h5>Fas &  Furious</h5>
+          <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+          <button class="btn btn-sm btn-warning customB">Remove</button>
+          <button class="btn btn-sm btn-warning customB">More</button>
+
+      
+        </div>
+      </div>
+      <div class="card">
+        <img class="full" src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7"/>
+        <div class="description">
+          <h5>Fas &  Furious</h5>
+          <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+          <button class="btn btn-sm btn-warning customB">Remove</button>
+          <button class="btn btn-sm btn-warning customB">More</button>
+
+      
+        </div>
+      </div><div class="card">
+        <img class="full" src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7"/>
+        <div class="description">
+          <h5>Fas &  Furious</h5>
+          <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+          <button class="btn btn-sm btn-warning customB">Remove</button>
+          <button class="btn btn-sm btn-warning customB">More</button>
+
+      
+        </div>
+      </div><div class="card">
+        <img class="full" src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t31.18172-8/29351540_205242206911082_5898172111523315569_o.jpg?stp=dst-jpg_p480x480&_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=UOXfirBlov8AX_s6HyT&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=00_AT-krUJicw7Ce-MQS-SSevevGwt8glaDzSh0pDZl_Ni1cg&oe=62DB27B7"/>
+        <div class="description">
+          <h5>Fas &  Furious</h5>
+          <small class="white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</small>
+          <button class="btn btn-sm btn-warning customB">Remove</button>
+          <button class="btn btn-sm btn-warning customB">More</button>
+
+      
+        </div>
+      </div>
+   
+
+
+  </div>
+ 
+</div>
+
+        </div>
     <main>
       <div class="beer-details">
         <h2 id="beer-name">Beer Name Goes Here</h2>
@@ -232,12 +285,8 @@
       </div>
     </main>
   </body>
-  <script src="./assets/js/jquery/dist/jquery.min.js"></script>
-<script src="./assets/css/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="./assets/js/javascript.js"></script>
-<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
-    integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </html>
