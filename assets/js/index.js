@@ -52,17 +52,37 @@ function renderCards(response) {
 
       var cardDiv = document.createElement('div');
       
+      
       if(index===1){
-        cardDiv.innerHTML =
+      cardDiv.classList.add("item");
+      cardDiv.classList.add("active");
+      cardDiv.innerHTML =
         ` 
-    <div class="item active">
-    <img src="${card.carousel}">
+   
+    <img src="${card.carousel}" alt="Los Angeles" style="width:100%;">
     <div class="carousel-caption">
       <h3>${card.title}</h3>
       <p>${card.description}</p>
+      <button class="btn btn-sm btn-warning customB_">More</button>
+
     </div>
-    </div> 
+ 
     `
+      }
+      else{
+        cardDiv.classList.add("item");
+        cardDiv.innerHTML =
+          ` 
+     
+      <img src="${card.carousel}" alt="Los Angeles" style="width:100%;">
+      <div class="carousel-caption">
+        <h3>${card.title}</h3>
+        <p>${card.description}</p>
+      <button class="btn btn-sm btn-warning customB_">More</button>
+
+      </div>
+   
+      `
       }
      
       document.getElementById('carousel').appendChild(cardDiv);

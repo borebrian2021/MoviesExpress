@@ -330,12 +330,29 @@ margin-bottom: 70px;
   position: relative;
 
 }
+.customB_{
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: #e49a04;
+  color: #2b2b31;
+  border: #e49a04 solid 1px;
+  color: ;
+  outline: none;
+  transition: all ease 0.1s;
+}
+.customB_:hover{
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: #e49a04;
+  color: #2b2b31;
+
+  outline: none;
+}
 .customB{
   margin-top: 10px;
   border-radius: 20px;
-  background-color: transparent;
+  background-color: #2b2b31;
   color: #2b2b31;
-  border: #e49a04 solid 1px;
   color: #e49a04;
   outline: none;
 }
