@@ -15,7 +15,6 @@
 function hideAllElements(){
     document.getElementById('watchList').style.display='none'
     document.getElementById('movieDetails').style.display='none'
-
 }
 
 // function renderNameOfTheBeer(response) {

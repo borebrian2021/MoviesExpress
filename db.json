@@ -1,5 +1,5 @@
 {
-  "beers": [
+  "movies": [
     {
       "id": 1,
       "title": "The Man from Toronto",
@@ -10,8 +10,8 @@
       "rates":"4",
       "lenght":"1:45",
       "poster": "https://www2.beatzjam.com/wp-content/uploads/2022/06/0-6.jpg",
-      "producerPoster":"https://images-na.ssl-images-amazon.com/images/S/amzn-author-media-prod/4237evohdno3t2rsouqb5med7r.jpg"
-    , "youtube":""
+      "producerPoster":"https://images-na.ssl-images-amazon.com/images/S/amzn-author-media-prod/4237evohdno3t2rsouqb5med7r.jpg",
+     "youtube":""
     }
     ,
     {
@@ -79,7 +79,8 @@
       "director":"Ahmed Khan",
       "producers:":"Sajid Nadiadwala, Qaisar Bukhsh, Pramod Kumar",
       "releaseDate":"29 April 2022",
-      "description": "A vigilante is sent on a mission by the government to kill enemy troops. However, things go wrong when he's mistaken for the leader of the troops."   "lenght":"2:05",
+      "description": "A vigilante is sent on a mission by the government to kill enemy troops. However, things go wrong when he's mistaken for the leader of the troops."  ,
+      "lenght":"2:05",
       "rates":"1.5",
       "poster": "https://www.bollywoodhungama.com/wp-content/uploads/2022/05/Heropanti-2-Box-Office-Estimate-Day-6.jpg",
       "producerPoster":"https://i0.wp.com/urbanasian.com/wp-content/uploads/2022/03/WhatsApp-Image-2022-03-02-at-1.59.10-PM.jpeg?resize=640%2C960&ssl=1",
