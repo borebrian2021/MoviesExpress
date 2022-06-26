@@ -13,12 +13,12 @@ document.addEventListener('DOMContentLoaded', () => {
   hideAllElements()
   fetchMoviesDetails()
   const playB= document.getElementById('youtube').addEventListener('click',function(){
+
  })
 
 });
 //OPERN MOVIE DETAILS
-function openMe(data) {
-
+  function openMe(data) {
   const poster = document.getElementById("mPoster");
   const director = document.getElementById("director");
   const actor = document.getElementById("actor");
@@ -32,8 +32,7 @@ function openMe(data) {
   const wholeCard = document.getElementById("movieDetails");
   const youtube = document.getElementById("youtube");
 
-
-
+  
   //SET DATA
   poster.style.backgroundImage = `url('${data.poster}')`
   director.innerHTML = data.director
@@ -48,6 +47,13 @@ function openMe(data) {
   document.getElementById('video').src=data.youtube
   //LOOP ON RATES
   renderRates(data.rates)
+
+  //UNHIDE MMOVIE DETAILS
+  const movieDetails = document.getElementById("movieDetails");
+  $('#cardsHolder_').fadeOut();
+  $('#movieSection').fadeOut();
+  $('#movieDetails').fadeIn();
+
 
 }
 
@@ -107,7 +113,6 @@ function renderCards(response) {
       <div class="description" id="description${index}">
         <h5>${card.title}</h5>
         <small>${card.description.split(' ').slice(0, 15).join(' ') + '...'}</small><br/>
-        alert( "Handler for .click() called.")
     
       </div>
     </div>`
@@ -180,7 +185,12 @@ function renderCarousel(response) {
 function hideAllElements() {
   document.getElementById('watchList').style.display = 'none'
   document.getElementById('video').style.display = 'none'
-  // document.getElementById('movieDetails').style.display = 'none'
+  document.getElementById('movieDetails').style.display = 'none'
+}
+function back() {
+  document.getElementById('watchList').style.display = 'none'
+  document.getElementById('video').style.display = 'none'
+  document.getElementById('movieDetails').style.display = 'none'
 }
 
 // function renderNameOfTheBeer(response) {

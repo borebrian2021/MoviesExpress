@@ -333,6 +333,7 @@ margin-bottom: 70px;
 #movieDetails{
   background-size: contain;
   background-repeat: no-repeat;
+  margin-top: 15px;
 }
 #video{
   height: 400px;
@@ -369,6 +370,20 @@ margin-bottom: 70px;
   outline: none;
 }
 .customB:active{
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: #e49a04;
+  color: #2b2b31;
+  outline: none;
+}
+.customBB{
+  margin-top: 10px;
+  border-radius: 20px;
+  background-color: transparent;
+  color: #e49a04;
+  outline: none;
+}
+.customBB:active{
   margin-top: 10px;
   border-radius: 20px;
   background-color: #e49a04;
@@ -426,7 +441,10 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .loveBig{
   height: 90px;
-
+  transition: all ease 0.3s;
+}
+.loveBig:hover{
+  height: 120px;
 }
 .btns:hover{
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
