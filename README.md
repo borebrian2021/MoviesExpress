@@ -1,7 +1,7 @@
 # Movies Express
 ## By Brian Kimutai Koskei
 ## Screenshot
- ![image](./assets/images/MOVIE.PNG)
+ ![image](./assets/Images/MOVIE.PNG)
  ## Table of Content
  - [Landing Page](#Landing-Page)
  - [Requirement](#Requirements)
