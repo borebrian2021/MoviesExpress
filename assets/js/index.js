@@ -65,18 +65,16 @@ function renderRates(rates) {
       ratesHolder.remo
       var rateImage = document.createElement('img');
       rateImage.classList.add('star')
-      rateImage.src = './assets/images/rate.png'
+      rateImage.src = './assets/Images/rate.png'
       ratesHolder.appendChild(rateImage)
 
     }
     else {
       var rateImage = document.createElement('img');
       rateImage.classList.add('star')
-      rateImage.src = './assets/images/unrate.png'
+      rateImage.src = './assets/Images/unrate.png'
       ratesHolder.appendChild(rateImage)
     }
-
-
   }
 }
 
