@@ -13,7 +13,7 @@
  - [Licence](#licence)
  - [Authors Info](#Authors-Info)
  ## Description
- <p>This is a straightforward UI-driven project. It is used to assess students' understanding of JavaScript. They respond to javascript questions and receive scores and comments.</p>
+ <p>This is a straightforward UI-driven project. Its used to explore movies details.</p>
 
 ## Landing page
 This is the page that lists the pupolar and most featured movies.
