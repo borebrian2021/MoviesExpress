@@ -12,11 +12,11 @@ $(document).ready(function(){
 //DISPLAYING THE YOUTUBE CARD
 $("#youtube").click(function() {
     $('#mPoster').fadeOut("slow");
-    $('#youtube').attr('src', './assets/images/loadingGif.gif')
+    $('#youtube').attr('src', './assets/Images/loadingGif.gif')
 
     setTimeout(() => {
         $('#video').fadeIn("slow");
-        $('#youtube').attr('src', './assets/images/youtube.png')
+        $('#youtube').attr('src', './assets/Images/youtube.png')
     
     
       }, "3000");
