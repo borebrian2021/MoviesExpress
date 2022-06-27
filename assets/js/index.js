@@ -288,7 +288,6 @@ function hideAllElements() {
   document.getElementById('movieDetails').style.display = 'none'
   document.getElementById('loading__').style.display = 'none'
   document.getElementById('watchList').style.display = 'none'
-
 }
 
 function showFev() {

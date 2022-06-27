@@ -45,10 +45,6 @@ $(".back").click(function() {
   $('#watchList').fadeOut();
   $('#movieSection').fadeIn();
   $('#pupularHolder').fadeIn();
-
-
-   
-
 });
 $("#fevourite").click(function() {
 
@@ -56,10 +52,6 @@ $("#fevourite").click(function() {
     $('#movieDetails').fadeOut();
     $('#watchList').fadeIn();
     $('#movieSection').fadeOut();
-
-
-   
-
 });
 $("#searchButton").click(function(){
     $('#loading__').fadeIn();
