@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // });
 
   //PLAY IFRAME
-
-
   hideAllElements()
   fetchMoviesDetails()
   const playB = document.getElementById('youtube').addEventListener('click', function () {
@@ -50,7 +48,7 @@ function openMe(data) {
 
   //UNHIDE MMOVIE DETAILS
   const movieDetails = document.getElementById("movieDetails");
-  $('#cardsHolder_').fadeOut();
+  $('#pupularHolder').fadeOut();
   $('#movieSection').fadeOut();
   $('#movieDetails').fadeIn();
 
@@ -108,7 +106,7 @@ function renderCards(response) {
   console.log(response)
   response.map((card, index, records) => {
     var cardDiv = document.createElement('div');
-    cardDiv.innerHTML = ` <div class="card">
+    cardDiv.innerHTML = ` <div class="card" id="card${index}">
       <img class="full" src="${card.poster}"/>
       <div class="description" id="description${index}">
         <h5>${card.title}</h5>
@@ -127,13 +125,46 @@ function renderCards(response) {
       openMe(card)
       // alert("working")
     });
+
+    var addToFev_ = document.createElement('button');
+    addToFev_.classList.add("btn");
+    addToFev_.classList.add("btn-sm");
+    addToFev_.classList.add("btn-warning");
+    addToFev_.classList.add("customB");
+    addToFev_.classList.add("ml");
+    addToFev_.innerText = "Add"
+    addToFev_.addEventListener('click', function (e) {
+      renderFev(index)
+      // alert("working")
+    });
     document.getElementById(`description${index}`).appendChild(detailsButton);
+    document.getElementById(`description${index}`).appendChild(addToFev_);
+
 
 
   })
 }
 
+//RENDER FEVOURITE
+//OPERN MOVIE DETAILS
+function renderFev(index) {
+ // Element stored in a variable for easy access 
+ var parentElement = document.getElementById(`fevourite_`); 
+ var child = document.getElementById(`card${index}`); 
+ var DOMContent = child.innerHTML; 
 
+ var card = document.createElement('div');
+ card.classList.add("card")
+ card.innerHTML=DOMContent
+ parentElement.appendChild(card)
+ console.log(card)
+
+ // Save the original content of the div 
+
+  // let target=$(`#card${index}`);
+  // console.log(old)
+  // jQuery(`#card${index}`).clone().appendTo('#fevourite')
+};
 //PERFORM DATA SEARCH
 function searchRecords(query) {
   fetch(BASE_URL)
@@ -249,12 +280,10 @@ function renderCarousel(response) {
     }
   })
 
-
-
 }
 
 function hideAllElements() {
-  document.getElementById('watchList').style.display = 'none'
+  // document.getElementById('watchList').style.display = 'none'
   document.getElementById('video').style.display = 'none'
   document.getElementById('movieDetails').style.display = 'none'
   document.getElementById('loading__').style.display = 'none'
@@ -266,100 +295,6 @@ function back() {
   document.getElementById('movieDetails').style.display = 'none'
 }
 
-// function renderNameOfTheBeer(response) {
 
-//   console.log(response.length)
-//   console.log(response);
-//   for (let i = 0; i < response.length; i++) {
-//     console.log(response[i].name)
-//     let beerName_ = response[i].name;
-//     const unoderedList = document.getElementById("beer-list");
-//     const list = document.createElement("li");
-//     list.addEventListener('click', function (e) {
-//       openMe(response[i])
-//       // alert("working")
-
-//     });
-//     list.innerHTML = beerName_
-//     unoderedList.appendChild(list)
-//   }
-
-// }
-// function renderBeerReviews(reviews_) {
-//     const unoderedList = document.getElementById("review-list");
-//     reviews_.forEach(element => {
-//         const list = document.createElement("li");
-//         list.innerHTML = element
-//         unoderedList.appendChild(list)
-//     });
-// }
-// function openMe(response) {
-//     console.log(response)
-//     let beerName_ = response.name;
-//     let beerImag_ = response.image_url
-//     let beerDescription_ = response.description
-//     let reviews_ = response.reviews
-
-//     const beerName = document.getElementById("beer-name");
-//     const beerDescription = document.getElementById("beer-description");
-//     const beerImage = document.getElementById("beer-image");
-
-//     beerName.innerText = beerName_;
-//     beerDescription.innerText = beerDescription_;
-//     beerImage.innerText = beerDescription_;
-//     beerImage.src = beerImag_;
-//     renderBeerReviews(reviews_)
-
-// }
-
-// document.getElementById('update').addEventListener('click', editBeer);
-
-// function editBeer() {
-//     let newDescription = document.getElementById('description').value
-//     fetch('https://expressmovies254.herokuapp.com/beers/1', {
-//         method: 'PATCH',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({
-//             'description': newDescription
-//         }),
-//     }).then(function (response) {
-//         return response.json();
-//     })
-//         .then(function (data) {
-//             appllyData(data)
-//             return renderNameOfTheBeer(data);
-//         });
-// }
-
-// let reviewForm = document.getElementById('review-form')
-// reviewForm.addEventListener('submit', function (event) {
-//     event.preventDefault()
-//     let newReview = document.getElementById('review').value
-//     let oldReviews = [];
-//     fetch('https://expressmovies254.herokuapp.com/beers')
-//         .then(function (response) {
-//             return response.json();
-//         }).then(function (data) {
-//             oldReviews = data[0].reviews
-//             oldReviews.push(newReview);
-//             console.log(oldReviews);
-//         });
-//     console.log("Logging data");
-//     console.log(oldReviews)
-//     fetch('https://expressmovies254.herokuapp.com/beers/1', {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/json' },
-//         body: JSON.stringify({
-//             'reviews': oldReviews
-//         }),
-//     }).then(function (response) {
-//         return response.json();
-//     })
-//         .then(function (data) {
-//             appllyData(data)
-//             return renderNameOfTheBeer(data);
-//         });
-// });
-// fetchBeerDetails();
 
 

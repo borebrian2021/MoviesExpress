@@ -516,13 +516,14 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   width: 200px;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
-
-
 }
 #title{
   transition: all 0.1s ease-in;
   font-size:25px ;
 
+}
+.ml{
+  margin-left:10px;
 }
 #genre{
   transition: all 0.1s ease-in;
@@ -541,15 +542,8 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 #title:hover{
   font-size:30px ;
 }
-/* .actor{
-  height: 40px;
-  width: 40px;
-  border-radius: 200px;
-  border:#f1a458 solid 2px;
-} */
 .cardHolder{
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-gap: 10px;
-
 }

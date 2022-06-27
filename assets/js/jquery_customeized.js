@@ -41,7 +41,7 @@ $(".loveBig").animate({
 });
 $("#back").click(function() {
 
-  $('#cardsHolder_').fadeIn("slow");
+  $('#pupularHolder').fadeIn("slow");
   $('#movieSection').fadeIn();
   $('#movieDetails').fadeOut();
    
@@ -57,3 +57,10 @@ $("#searchButton").click(function(){
       }, "1500");
     // alert();
   });
+
+//RENDER FEVOURITE
+//OPERN MOVIE DETAILS
+
+
+
+  
