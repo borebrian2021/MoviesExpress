@@ -287,12 +287,23 @@ function hideAllElements() {
   document.getElementById('video').style.display = 'none'
   document.getElementById('movieDetails').style.display = 'none'
   document.getElementById('loading__').style.display = 'none'
+  document.getElementById('watchList').style.display = 'none'
 
+}
+
+function showFev() {
+  // document.getElementById('watchList').style.display = 'none'
+  document.getElementById('video').style.display = 'none'
+  document.getElementById('movieDetails').style.display = 'none'
+  document.getElementById('loading__').style.display = 'none'
+  $('#watchList').fadeIn();
 }
 function back() {
   document.getElementById('watchList').style.display = 'none'
   document.getElementById('video').style.display = 'none'
   document.getElementById('movieDetails').style.display = 'none'
+  document.getElementById('watchList').style.display = 'none'
+
 }
 
 

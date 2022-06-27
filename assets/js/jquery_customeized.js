@@ -39,11 +39,25 @@ $(".loveBig").animate({
       width: $('.loveBig').width("+=10")
     });
 });
-$("#back").click(function() {
+$(".back").click(function() {
 
-  $('#pupularHolder').fadeIn("slow");
-  $('#movieSection').fadeIn();
   $('#movieDetails').fadeOut();
+  $('#watchList').fadeOut();
+  $('#movieSection').fadeIn();
+  $('#pupularHolder').fadeIn();
+
+
+   
+
+});
+$("#fevourite").click(function() {
+
+    $('#pupularHolder').fadeOut("slow");
+    $('#movieDetails').fadeOut();
+    $('#watchList').fadeIn();
+    $('#movieSection').fadeOut();
+
+
    
 
 });
