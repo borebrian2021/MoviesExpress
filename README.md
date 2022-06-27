@@ -8,7 +8,6 @@
 
  - [Installation Process](#installation-Process)
  - [Live Link](#Live-Link)
- - [Figma Link](#Figma-Link)
 
  - [Technology  Used](#technology-Used)
  - [Licence](#licence)
